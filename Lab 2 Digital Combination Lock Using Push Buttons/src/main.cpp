@@ -5,7 +5,7 @@
 #define PASSWORD_LENGTH 4
 
 
-uint8_t password[PASSWORD_LENGTH] = {1, 2, 3, 4};
+uint8_t password[PASSWORD_LENGTH] = {1, 1, 2, 2};
 
 
 uint8_t entered[PASSWORD_LENGTH];
@@ -86,21 +86,21 @@ void loop()
 
         if (correct)
         {
-            PORTB |= (1 << PB0);   
-            PORTB &= ~(1 << PB1);
+            PORTB |= (1 << PB0);    
+            PORTB &= ~(1 << PB1);   
         }
 
 
         else
         {
-            PORTB |= (1 << PB1);
+            PORTB |= (1 << PB1); 
             PORTB &= ~(1 << PB0);
         }
 
         
         _delay_ms(3000);
 
-     
+      
         PORTB &= ~(1 << PB0);
         PORTB &= ~(1 << PB1);
 
